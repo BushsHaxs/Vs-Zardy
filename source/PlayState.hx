@@ -85,6 +85,8 @@ import sys.FileSystem;
 
 using StringTools;
 
+var video:MP4Handler = new MP4Handler();
+video.playMP4(Paths.video('nameofyourvideohere'), new PlayState());
 
 class PlayState extends MusicBeatState
 {
@@ -4413,22 +4415,6 @@ class PlayState extends MusicBeatState
 	public function focusIn()
 	{
 		// nada
-	}
-
-	public function backgroundVideo(source:String) // for background videos
-	{
-		#if cpp
-		useVideo = true;
-		var video:MP4Handler = new MP4Handler();
-
-		videoSprite = new FlxSprite(0,0);
-		videoSprite.scrollFactor.set();
-		videoSprite.cameras = [camHUD];
-
-		video.playMP4(Paths.video(source),null, videoSprite);
-
-		trace('poggers');
-		#end
 	}
 
 	function noteMiss(direction:Int = 1, daNote:Note):Void
