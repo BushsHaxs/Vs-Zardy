@@ -99,15 +99,6 @@ class VlcBitmap extends Bitmap
 	// var frameBitmap					: Bitmap;
 	var frameRect:Rectangle;
 
-	/////////////////////////////////////////////////////////////////////////////////////
-
-	function init()
-	{
-		#if (cpp && !mobile)
-		addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
-		#end
-	}
-
 	function onAddedToStage(e:Event):Void
 	{
 		removeEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
