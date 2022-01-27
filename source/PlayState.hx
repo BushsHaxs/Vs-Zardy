@@ -85,9 +85,6 @@ import sys.FileSystem;
 
 using StringTools;
 
-var video:MP4Handler = new MP4Handler();
-video.playMP4(Paths.video('nameofyourvideohere'), new PlayState());
-
 class PlayState extends MusicBeatState
 {
 	public static var instance:PlayState = null;
