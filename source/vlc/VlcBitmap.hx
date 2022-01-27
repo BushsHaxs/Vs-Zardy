@@ -101,18 +101,6 @@ class VlcBitmap extends Bitmap
 
 	/////////////////////////////////////////////////////////////////////////////////////
 
-	public function new()
-	{
-		super(null, null, true);
-
-		#if (cpp && !mobile)
-		// libvlc = LibVLC.create();
-		// var videoThread = Thread.create(mThread);
-		// videoThread.sendMessage(Thread.current());
-		init();
-		#end
-	}
-
 	function mThread()
 	{
 		init();
