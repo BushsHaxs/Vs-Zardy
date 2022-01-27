@@ -57,7 +57,6 @@ class ResultsScreen extends FlxSubState
 	{	
         if (PlayState.Stage.curStage == "zardyBruh")
             {
-                PlayState.instance.backgroundVideo("vineShit");
                 PlayState.instance.videoSprite.alpha = 0;
                 PlayState.instance.videoSprite.setGraphicSize(Std.int(PlayState.instance.videoSprite.width * 1.4));
                 PlayState.instance.videoSprite.x = -100;
