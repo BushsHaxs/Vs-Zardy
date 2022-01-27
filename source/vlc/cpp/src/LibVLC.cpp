@@ -102,11 +102,7 @@ static unsigned format_setup(void** opaque, char* chroma, unsigned* width, unsig
 	(*pitches) = _pitch;
 	(*lines) = _h;
 	memcpy(chroma, "RV32", 4);
-	
-	if (callback->pixeldata != 0)
-		delete callback->pixeldata;
-	if (callback->pixeldata2 != 0)
-		delete callback->pixeldata2;
+
 		
 	callback->pixeldata = new unsigned char[_frame];
 	callback->pixeldata2 = new unsigned char[_frame];
