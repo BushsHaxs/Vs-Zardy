@@ -99,13 +99,6 @@ class VlcBitmap extends Bitmap
 	// var frameBitmap					: Bitmap;
 	var frameRect:Rectangle;
 
-	function onAddedToStage(e:Event):Void
-	{
-		removeEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
-		libvlc = LibVLC.create();
-		stage.addEventListener(Event.ENTER_FRAME, vLoop);
-	}
-
 	/////////////////////////////////////////////////////////////////////////////////////
 
 	public function play(?source:String)
